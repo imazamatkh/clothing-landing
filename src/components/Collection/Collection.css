@@ -59,7 +59,7 @@
   }
 }
 
-@media (max-width: 340px) {
+@media (max-width: 400px) {
   .collection__explore:nth-child(1),
   .collection__explore:nth-child(2) {
     position: initial;
