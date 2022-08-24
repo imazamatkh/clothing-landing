@@ -1,0 +1,23 @@
+/*=============== HEADER & NAV ===============*/
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  z-index: var(--z-fixed);
+  transition: 0.4s ease;
+}
+
+/* Change background header */
+.header.scroll-header {
+  background-color: var(--body-color);
+  box-shadow: 0 1px 4px hsla(220, 4%, 15%, 0.1);
+}
+
+.header__content {
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

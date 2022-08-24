@@ -1,0 +1,56 @@
+/*=============== NEW ===============*/
+.new__grid {
+  row-gap: 2.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.new__card {
+  justify-self: center;
+}
+
+.new__img {
+  width: 270px;
+  margin-bottom: 1rem;
+}
+
+.new__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--title-color);
+  padding-right: 0.75rem;
+}
+
+.new__link svg {
+  transition: 0.3s ease;
+}
+
+.new__link:hover svg {
+  transform: translateX(0.25rem);
+}
+
+.new__title {
+  font-size: var(--h2-font-size);
+  margin-bottom: 0.5rem;
+}
+
+.new__subtitle {
+  font-size: var(--smaller-font-size);
+  color: var(--text-color);
+}
+
+@media (min-width: 767px) {
+  .new__grid {
+    grid-template-columns: repeat(2, max-content);
+    justify-content: center;
+  }
+}
+
+@media (max-width: 340px) {
+  .new__img {
+    width: 230px;
+  }
+  .new__link {
+    padding-right: 0;
+  }
+}

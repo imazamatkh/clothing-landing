@@ -1,0 +1,258 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --bg-color: hsl(220, 18%, 78%);
+  --bg-color-light: hsl(220, 18%, 86%);
+  --title-color: hsl(220, 8%, 10%);
+  --text-color: hsl(220, 4%, 32%);
+  --text-color-light: hsl(220, 4%, 55%);
+  --body-color: hsl(220, 18%, 99%);
+  --container-color: hsl(220, 18%, 97%);
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: 'Lora', serif;
+
+  --biggest-font-size: 2.25rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+  /*========== Font weight ==========*/
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+@media screen and (min-width: 1124px) {
+  :root {
+    --biggest-font-size: 4.5rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+/*=============== BASE ===============*/
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+  margin: 0;
+  transition: 0.4s ease; /* For animation dark mode */
+}
+
+h1, h2, h3 {
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
+button {
+  cursor: pointer;
+  font-size: inherit;
+  font-weight: inherit;
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  appearance: none;
+  display: flex;
+}
+
+svg path:nth-child(2) {
+  fill: var(--title-color);
+}
+
+/*=============== THEME ===============*/
+/*========== Variables Dark theme ==========*/
+body.dark-mode {
+  --bg-color: hsl(220, 18%, 13%);
+  --bg-color-light: hsl(220, 18%, 23%);
+  --title-color: hsl(220, 8%, 95%);
+  --text-color: hsl(220, 8%, 65%);
+  --body-color: hsl(220, 18%, 18%);
+  --container-color: hsl(220, 18%, 21%);
+}
+
+/*==========
+    Color changes in some parts of
+    the website, in dark theme
+==========*/
+body.dark-mode .header.scroll-header {
+  box-shadow: 0 2px 8px hsla(220, 18%, 8%, 0.3);
+}
+
+body.dark-mode .nav {
+  background-color: var(--container-color);
+}
+
+body.dark-mode .nav,
+body.dark-mode .scroll-up {
+  box-shadow: 0 4px 8px hsla(220, 18%, 8%, 0.3);
+}
+
+body.dark-mode::-webkit-scrollbar {
+  background-color: hsl(220, 18%, 15%);
+}
+
+body.dark-mode::-webkit-scrollbar-thumb {
+  background-color: hsl(220, 18%, 25%);
+}
+
+body.dark-mode::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(220, 18%, 35%);
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+  max-width: 1024px;
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.section {
+  padding: 4.5rem 0 2rem;
+}
+
+.section__title {
+  font-size: var(--h1-font-size);
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.main {
+  overflow: hidden; /* For animation ScrollReveal */
+}
+
+/*=============== BUTTON ===============*/
+.button__link {
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.button__link svg {
+  width: 16px;
+  transition: 0.3s ease;
+}
+
+.button__link:hover svg {
+  transform: translateX(0.25rem);
+}
+
+/* Swiper class */
+.swiper {
+  padding-bottom: 4rem!important;
+}
+
+.prev,
+.next {
+  position: absolute;
+  bottom: 0;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.prev {
+  left: calc(50% - 2rem);
+}
+
+.next {
+  right: calc(50% - 2rem);
+}
+
+/*=============== SCROLL BAR ===============*/
+::-webkit-scrollbar {
+  width: 0.6rem;
+  border-radius: 0.5rem;
+  background-color: hsla(220, 8%, 76%);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: hsla(220, 8%, 64%);
+  border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: hsla(220, 8%, 54%);
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media (max-width: 340px) {
+  .container {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+
+
+/* For medium devices */
+
+
+/* For large devices */
+
+
+/* For 2K resolutions (2048 x 1152, 2048 x 1536) */
+
+
+/* For 4K resolutions (3840 x 2160, 4096 x 2160) */

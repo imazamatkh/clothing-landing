@@ -1,0 +1,7 @@
+.logo {
+  color: var(--text-color);
+}
+
+.logo__link {
+  font-weight: var(--font-medium);
+}
