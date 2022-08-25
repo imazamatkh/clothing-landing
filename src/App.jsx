@@ -3,9 +3,12 @@ import { Routes, Route } from 'react-router-dom'
 
 import './App.css'
 
-import Header from './components/Header/Header'
 import MainPage from './router/MainPage/MainPage'
 import NewPage from './router/NewPage/NewPage'
+import CollectionPage from './router/CollectionPage/CollectionPage'
+import ProductsPage from './router/ProductsPage/ProductsPage'
+
+import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
 import ScrollUp from './components/ScrollUp/ScrollUp'
 
@@ -35,6 +38,8 @@ function App() {
       <Routes>
         <Route path={'/'} element={<MainPage />} />
         <Route path={'/new'} element={<NewPage />} />
+        <Route path={'/collection'} element={<CollectionPage />} />
+        <Route path={'/products'} element={<ProductsPage />} />
       </Routes>
       <Footer />
       <ScrollUp />

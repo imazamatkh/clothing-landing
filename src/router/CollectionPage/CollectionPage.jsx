@@ -1,17 +1,17 @@
-import New from '../../components/New/New'
 import Collection from '../../components/Collection/Collection'
 import Products from '../../components/Products/Products'
 import Brands from '../../components/Brands/Brands'
+import New from '../../components/New/New'
 
-function NewPage() {
+function CollectionPage() {
   return (
     <>
-      <New />
       <Collection />
+      <New />
       <Products />
       <Brands />
     </>
   )
 }
 
-export default NewPage
+export default CollectionPage
