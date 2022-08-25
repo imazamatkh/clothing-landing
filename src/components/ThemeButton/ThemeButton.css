@@ -6,3 +6,11 @@
   width: 18px;
 }
 
+@media (min-width: 1023px) {
+  .theme-button {
+    margin-left: 3rem;
+  }
+  .theme-button svg path:nth-child(2) {
+    fill: var(--text-color);
+  }
+}

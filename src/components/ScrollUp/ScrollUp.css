@@ -22,3 +22,13 @@
 .scroll-up.show-scroll {
   bottom: 7.5rem;
 }
+
+@media (min-width: 1124px) {
+  .scroll-up {
+    right: 3rem;
+  }
+
+  .scroll-up.show-scroll {
+    bottom: 3rem;
+  }
+}

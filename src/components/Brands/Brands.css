@@ -19,6 +19,15 @@
   }
 }
 
+@media (min-width: 1124px) {
+  .brands__grid {
+    column-gap: 5.5rem;
+  }
+  .brands__img {
+    width: 140px;
+  }
+}
+
 @media (max-width: 340px) {
   .brands__grid {
     grid-template-columns: repeat(2, 100px);

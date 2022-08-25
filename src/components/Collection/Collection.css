@@ -59,6 +59,33 @@
   }
 }
 
+@media (min-width: 1124px) {
+  .collection__content {
+    height: 760px;
+    margin-bottom: 2rem;
+  }
+
+  .collection__explore:nth-child(1) {
+    margin-left: 10rem;
+  }
+
+  .collection__explore:nth-child(2) {
+    margin-right: 10rem;
+  }
+
+  .collection__explore:nth-child(1) .collection__img {
+    width: 330px;
+  }
+
+  .collection__explore:nth-child(2) .collection__img {
+    width: 330px;
+  }
+
+  .collection__explore {
+    column-gap: 5rem;
+  }
+}
+
 @media (max-width: 400px) {
   .collection__explore:nth-child(1),
   .collection__explore:nth-child(2) {

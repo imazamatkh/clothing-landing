@@ -1,7 +1,4 @@
 /*=============== PRODUCTS ===============*/
-.products__card {
-}
-
 .products__img {
   margin-bottom: 1rem;
 }
@@ -14,4 +11,10 @@
 .products__price {
   color: var(--title-color);
   font-weight: var(--font-medium);
+}
+
+@media (min-width: 1023px) {
+  .products .container {
+    max-width: 954px;
+  }
 }

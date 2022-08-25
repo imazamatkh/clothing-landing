@@ -57,6 +57,27 @@
   }
 }
 
+@media (min-width: 1124px) {
+  .home__content {
+    padding: 10rem 0 3rem;
+  }
+  .home__grid {
+    column-gap: 0;
+  }
+  .home__images {
+    width: 500px;
+    margin-top: 8rem;
+    transform: translate(-1rem);
+  }
+  .home__images img:nth-child(1) {
+    width: 345px;
+    top: -14.5rem;
+  }
+  .home__images img:nth-child(2) {
+    width: 277px;
+  }
+}
+
 @media (max-width: 340px) {
   .home__content {
     padding: 2rem 0 1rem;
